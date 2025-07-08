@@ -1,33 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>To-Do List</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
 </head>
-<body class="bg-gray-800 min-h-screen flex items-center justify-center">
-  <div class="flex w-full max-w-3xl h-[500px] bg-white/10 shadow-2xl rounded-2xl overflow-hidden">
+<body class="bg-gray-800 min-h-screen flex items-center justify-center p-4">
+  <div class="flex flex-col md:flex-row w-full max-w-3xl h-auto md:h-[500px] bg-white/10 shadow-2xl rounded-2xl overflow-hidden">
     <!-- Sidebar -->
-    <aside class="w-1/3 bg-green-300 flex-col justify-between py-8 px-6">
+    <aside class="w-full md:w-1/3 bg-green-300 flex flex-col justify-between py-6 px-4 md:px-6">
       <div>
-        <h2 class="text-2xl font-bold text-black-300 mb-8 tracking-wider">My Tasks</h2>
-        <div class="mb-8">
-          <div class="text-xs text-black-400 mb-2">Progress</div>
+        <h2 class="text-2xl font-bold text-black mb-6 tracking-wider text-center md:text-left">My Tasks</h2>
+        <div class="mb-6">
+          <div class="text-xs text-black mb-2">Progress</div>
           <div class="w-full bg-gray-700 rounded">
             <div id="progress" class="h-3 bg-blue-500 rounded transition-all" style="width:0%"></div>
           </div>
         </div>
         <ul id="todo-list" class="space-y-3"></ul>
       </div>
-      <div class="text-xs text-black-500 mt-8">Click a task to mark as complete.</div>
+      <div class="text-xs text-black mt-6 text-center md:text-left">Click a task to mark as complete.</div>
     </aside>
-    <!-- Main -->*
-    <main class="flex-1 flex flex-col justify-center items-center bg-green-300">
-      <h1 class="text-3xl font-bold mb-6 text-gray-900 text-center">To-Do List</h1>
-      <form id="todo-form" class="flex mb-4 w-4/5">
-        <input id="todo-input" type="text" class="flex-1 border rounded-l px-3 py-2 focus:outline-none" placeholder="Add a new task" required>
-        <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-r hover:bg-blue-600">Add</button>
+
+    <!-- Main -->
+    <main class="w-full md:flex-1 flex flex-col justify-center items-center bg-green-300 py-6 px-4">
+      <h1 class="text-3xl font-bold mb-4 text-gray-900 text-center">To-Do List</h1>
+      <form id="todo-form" class="flex flex-col sm:flex-row w-full max-w-md">
+        <input id="todo-input" type="text" class="flex-1 border rounded-t sm:rounded-l sm:rounded-tr-none px-3 py-2 focus:outline-none" placeholder="Add a new task" required />
+        <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-b sm:rounded-r sm:rounded-bl-none mt-2 sm:mt-0 hover:bg-blue-600">Add</button>
       </form>
     </main>
   </div>
